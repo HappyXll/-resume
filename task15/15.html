@@ -125,18 +125,37 @@
             display: block;
             clear: both;
         }
+        #about{
+            background-color: rgba(222, 199, 223, 0.42);
+        }
         .width{
             width: 400px;
             margin-left: auto;
             margin-right: auto;
         }
         .por-wrapper{
-
+            position: relative;
             margin-bottom: 20px;
             background-color: #fff;
         }
-        .por-wrapper:hover{
-            transform : scale(1.05,1.05);
+        .por-hover{
+            display: none;
+            width:100%;
+            height:100% ;
+            position: absolute;
+            top:0;
+            left: 0;
+            background-color: #0a0b0c;
+            opacity: 0.7;
+        }
+        .por-hover img{
+            position: absolute;
+            top:28%;
+            left: 31%;
+        }
+        .por-wrapper:hover .por-hover{
+            display: block;
+            transition:  all .15s;
         }
 
         .por-wrapper img{
@@ -207,6 +226,60 @@
            font-weight: bold;
            color: #eff2e8;
        }
+       #contact-us{
+           background-color: #b8bfcd;}
+
+       .row{
+           width: 100%;
+       }
+       .clear:after{
+           content: "";
+           display: block;
+           clear: both;
+       }
+       .col-6{
+           width: 50%;
+           box-sizing: border-box;
+       }
+       .con-text{
+           display: block;
+           width: 91%;
+           padding: 20px;
+           height: 33px;
+           margin-bottom: 27px;
+           border-radius: 11px;
+           border: 1px solid #ccc;
+           box-shadow:  inset 0 1px 1px rgba(0,0,0,.075);
+       }
+        .con-textarea{
+           width: 93%;
+           height: 236px;
+            resize: none;
+            border-radius: 11px;
+            border: 1px solid #ccc;
+            box-shadow:  inset 0 1px 1px rgba(0,0,0,.075);
+            padding: 20px;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.4em;
+            margin-left: 3%;
+       }
+        .contactForm{
+            margin-top: 20px;
+        }
+        .con-button{
+            display: inline-block;
+            text-decoration: none;
+            padding: 20px 40px;
+            color: #fff;
+            font-size: 22px;
+            line-height: 1.4em;
+            font-weight: bold;
+            background-color: #fed136;
+            border-radius: 5px;
+            border: 1px solid #fed136;
+
+        }
         @media (min-width: 776px) {
             .container{
                 width: 750px;
@@ -303,6 +376,9 @@
         <p class="text-center">Lorem ipsum dolor sit amet consectetur..</p>
         <div class="por-box">
             <div class="por-wrapper width text-center">
+                <div class="por-hover">
+                    <img src="img/icon.png" alt="">
+                </div>
                 <img src="img/roundicons.png" alt="#">
                 <div class="por-intr">
                 <h4>Round Icons</h4>
@@ -310,6 +386,9 @@
                 </div>
             </div>
             <div class="por-wrapper width text-center">
+                <div class="por-hover">
+                    <img src="img/icon.png" alt="">
+                </div>
                 <img src="img/dreams.png" alt="#">
                 <div class="por-intr">
                 <h4>Startup Framework
@@ -318,6 +397,9 @@
                 </div>
             </div>
             <div class="por-wrapper width text-center">
+                <div class="por-hover">
+                    <img src="img/icon.png" alt="">
+                </div>
                 <img src="img/escape.png" alt="#">
                 <div class="por-intr">
                 <h4>Treehouse
@@ -326,6 +408,9 @@
                 </div>
             </div>
             <div class="por-wrapper  width text-center">
+                <div class="por-hover">
+                    <img src="img/icon.png" alt="">
+                </div>
                 <img src="img/golden.png" alt="#">
                 <div class="por-intr">
                 <h4>Golden</h4>
@@ -333,6 +418,9 @@
                 </div>
             </div>
             <div class="por-wrapper  width text-center">
+                <div class="por-hover">
+                    <img src="img/icon.png" alt="">
+                </div>
                 <img src="img/startup-framework.png" alt="#">
                 <div class="por-intr">
                 <h4>Escape</h4>
@@ -340,6 +428,9 @@
                 </div>
             </div>
             <div class="por-wrapper  width text-center">
+                <div class="por-hover">
+                    <img src="img/icon.png" alt="">
+                </div>
                 <img src="img/treehouse.png" alt="#">
                 <div class="por-intr">
                 <h4>Dreams</h4>
@@ -400,6 +491,27 @@
             </li>
             <li class="about-bottom"> <div class="timeline-img timeline-end">END</div></li>
         </ul>
+    </div>
+</section>
+<section id="contact-us">
+    <div class="container">
+        <h2 class="text-center">CONTACT US</h2>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur.</p>
+        <form class="contactForm" name="sentMessage">
+            <div class="row clear">
+                <div class="col-6 float-left">
+                    <input  class="con-text"placeholder="YOUR NAME" type="text">
+                    <input  class="con-text"placeholder="YOUR PHONE" type="text">
+                    <input  class="con-text"placeholder="YOUR EMAIL" type="text">
+                </div>
+                <div class="col-6 float-left">
+                    <textarea class="con-textarea" placeholder="YOUR MESSAGE:" ></textarea>
+                </div>
+            </div>
+            <div class="row text-center"><a class="con-button" href="#">SEND MESSAGE</a></div>
+        </form>
+
+
     </div>
 </section>
 </body>
