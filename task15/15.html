@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task15</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        header{
+            background: url(img/header-bg.jpg) no-repeat center center;
+            background-size: cover;
+            color: #fff;
+        }
+        .nav{
+            position: fixed;
+           width: 100%;
+            padding: 20px 0;
+        background-color: rgba(252, 242, 242, 0.38);
+        }
+        header .nav-left{
+            float: left;
+            margin-left: 10%;
+            font-size: 26px;
+            color: #eec10d;
+        }
+        header .nav-right{
+            float: right;
+            margin-right: 20%;
+            margin-top: 11px;
+
+        }
+        .nav-right>li{
+            list-style: none;
+            float: left;
+            margin-right: 20px;
+            font-size: 16px;
+            padding: 6px;
+        }
+        .nav-right>li>a{
+            text-decoration: none;
+            color: #b8bfcd;
+        }
+        .nav-right>li:hover{
+         background-color: rgba(199, 166, 166, 0.74);
+            border-radius: 5px;
+
+        }
+        .container{
+            padding-top: 50px;
+            margin-right: auto;
+            margin-left: auto;
+
+            padding-bottom: 60px;
+        }
+        .text-center{
+            text-align: center;
+        }
+
+
+        .intro-lead-in{
+            font-size: 22px;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+        .intro-heading{
+            font-size: 50px;
+            line-height: 50px;
+        }
+        button{
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            padding: 20px 40px;
+            background-color: #fed136;
+            font-weight: 700;
+            margin-top: 30px
+        }
+        button a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .ser-box{
+            margin-top: 30px;
+            overflow: auto;
+        }
+        .ser-wrapper{
+            width: 100%;
+            display: block;
+            margin-top: 20px;
+        }
+        .ser-wrapper img{
+            width: 50%;
+            border-radius: 50%;
+        }
+       .ser-wrapper .wrap-title{
+           margin-top: 10px;
+       }
+        .container h2{
+            font-size: 40px;
+            line-height: 40px;
+            margin-bottom: 30px;
+        }
+        .container p{
+            font-size: 16px;
+            font-weight: 400;
+            color: rgba(67, 44, 44, 0.84);
+        }
+        #portfolio{
+               background-color: #cfa8b5;
+        }
+        .por-intr{
+            background-color: #fff;
+            padding:  20px 0;
+            margin-top: -5px;
+            margin-bottom: 10px;
+
+        }
+        .por-box{
+          margin-top: 30px;
+        }
+        .por-box:after{
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        .width{
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .por-wrapper{
+
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+        .por-wrapper:hover{
+            transform : scale(1.05,1.05);
+        }
+
+        .por-wrapper img{
+           max-width: 100%;
+
+        }
+        .timeline{
+            position: relative;
+        }
+        .timeline:before{
+            content: " ";
+            width: 3px;
+            height: 87%;
+            background-color: rgba(188, 187, 187, 0.65);
+            display: block;
+            position: absolute;
+            left: 50%;
+            top:10%;
+        }
+        .float-left{
+            float: left;
+        }
+        .float-right{
+            float: right;
+        }
+        .timeline>li
+        {
+            position: relative;
+            overflow: auto;
+            margin-top: 20px;
+        }
+        .timeline-panel{
+            width: 35%;
+            padding: 4%;
+        }
+        .text-right{
+            text-align: right;
+        }
+        .text-left{
+            text-align: left;
+        }
+        .timeline-panel h4{
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+       .timeline-img{
+           width: 170px;
+           height: 170px;
+           border-radius: 50%;
+           box-shadow: 0px 0px 0px 8px #f1f1f1;
+           position: absolute;
+           top: 10%;
+           left: 50%;
+           transform: translateX(-50%);
+       }
+       .about-bottom{
+          height: 200px;
+       }
+       .penel-body{
+           font-size: 14px;
+           line-height: 1.4em;
+       }
+       .timeline-end{
+           line-height: 170px;
+           text-align: center;
+           background: rgb(151, 151, 62);
+           font-size: 44px;
+           font-weight: bold;
+           color: #eff2e8;
+       }
+        @media (min-width: 776px) {
+            .container{
+                width: 750px;
+                padding-top: 200px;
+                padding-bottom: 132px;            }
+
+            .ser-wrapper{
+
+                width: 30%;
+                float: left;
+                margin-left: 2%;
+            }
+
+            .container  .intro-lead-in{
+                font-size: 40px;
+                line-height: 40px;
+                margin-bottom: 43px;
+            }
+            .container .intro-heading{
+                font-size: 75px;
+                line-height:75px;
+            }
+            .width{
+                float: left;
+                width: 45%;
+                margin-left: 4%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container{
+                width: 970px;
+            }
+            .width{
+                float: left;
+                width: 30%;
+                margin-left: 3%;
+            }
+        }
+        @media (min-width: 1200px) {
+            .container{
+                width: 1170px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="nav">
+     <div class="nav-left">Strat Project</div>
+     <ul class="nav-right">
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">TEAM</a></li>
+        <li><a href="#">CONTACT</a></li>
+     </ul>
+    </div>
+    <div class="container text-center">
+        <h4 class="intro-lead-in"> Welcome To Our Studio!</h4>
+        <h1 class="intro-heading">It's NICE TO MEET YOU</h1>
+        <button><a href="#">TELL ME MORE</a></button>
+    </div>
+</header>
+<section id="service">
+    <div class="container">
+      <h2 class="text-center"> SERVICES</h2>
+      <p class="text-center">Lorem ipsum dolor sit amet consectetur.</p>
+        <div class="ser-box">
+         <div class="ser-wrapper text-center">
+          <img src="https://i.loli.net/2017/09/16/59bc02cb02bd0.png" alt="pic">
+          <div class="wrap-title">E-Commerce</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum
+            ex magni, dicta impedit.</p>
+         </div>
+        <div class="ser-wrapper text-center">
+            <img src="https://i.loli.net/2017/09/16/59bc02cb02bd0.png" alt="pic">
+            <div class="wrap-title">E-Commerce</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum
+                ex magni, dicta impedit.</p>
+        </div>
+        <div class="ser-wrapper text-center">
+            <img src="https://i.loli.net/2017/09/16/59bc02cb02bd0.png" alt="pic">
+            <div class="wrap-title">E-Commerce</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum
+                ex magni, dicta impedit.</p>
+         </div>
+        </div>
+    </div>
+</section>
+<section id="portfolio">
+    <div class="container">
+        <h2 class="text-center"> PORTFOLIO</h2>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur..</p>
+        <div class="por-box">
+            <div class="por-wrapper width text-center">
+                <img src="img/roundicons.png" alt="#">
+                <div class="por-intr">
+                <h4>Round Icons</h4>
+                <p>Graphic Design</p>
+                </div>
+            </div>
+            <div class="por-wrapper width text-center">
+                <img src="img/dreams.png" alt="#">
+                <div class="por-intr">
+                <h4>Startup Framework
+                    </h4>
+                <p>Website Design</p>
+                </div>
+            </div>
+            <div class="por-wrapper width text-center">
+                <img src="img/escape.png" alt="#">
+                <div class="por-intr">
+                <h4>Treehouse
+                    </h4>
+                <p>Website Design</p>
+                </div>
+            </div>
+            <div class="por-wrapper  width text-center">
+                <img src="img/golden.png" alt="#">
+                <div class="por-intr">
+                <h4>Golden</h4>
+                <p>Website Design</p>
+                </div>
+            </div>
+            <div class="por-wrapper  width text-center">
+                <img src="img/startup-framework.png" alt="#">
+                <div class="por-intr">
+                <h4>Escape</h4>
+                <p>Graphic Design</p>
+                </div>
+            </div>
+            <div class="por-wrapper  width text-center">
+                <img src="img/treehouse.png" alt="#">
+                <div class="por-intr">
+                <h4>Dreams</h4>
+                <p>Graphic Design</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about">
+    <div class="container">
+        <h2 class="text-center">ABOUT</h2>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur.</p>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-panel float-left text-right">
+                    <h4 class="panel-time">2009-2011</h4>
+                    <h4 class="panel-title">Our Humble Beginnings</h4>
+                    <p class="penel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+                        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed,
+                        incidunt et ea quo dolore laudantium consectetur!
+                    </p>
+                </div>
+                <img src="img/1.jpg" alt="" class="timeline-img">
+            </li>
+            <li>
+                <div class="timeline-panel float-right text-left">
+                    <h4 class="panel-time">2009-2011</h4>
+                    <h4 class="panel-title">Our Humble Beginnings</h4>
+                    <p class="penel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+                        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed,
+                        incidunt et ea quo dolore laudantium consectetur!
+                    </p>
+                </div>
+                <img src="img/2.jpg" alt="" class="timeline-img">
+            </li>
+            <li>
+                <div class="timeline-panel float-left text-right">
+                    <h4 class="panel-time">2009-2011</h4>
+                    <h4 class="panel-title">Our Humble Beginnings</h4>
+                    <p class="penel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+                        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed,
+                        incidunt et ea quo dolore laudantium consectetur!
+                    </p>
+                </div>
+                <img src="img/3.jpg" alt="" class="timeline-img">
+            </li>
+            <li>
+                <div class="timeline-panel float-right text-left">
+                    <h4 class="panel-time">2009-2011</h4>
+                    <h4 class="panel-title">Our Humble Beginnings</h4>
+                    <p class="penel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+                        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed,
+                        incidunt et ea quo dolore laudantium consectetur!
+                    </p>
+                </div>
+                <img src="img/4.jpg" alt="" class="timeline-img">
+            </li>
+            <li class="about-bottom"> <div class="timeline-img timeline-end">END</div></li>
+        </ul>
+    </div>
+</section>
+</body>
+</html>
